@@ -19,7 +19,7 @@ appServer.post("/signin",(req,res)=>{
             //validate the input against the entries available in mongoserver
             //select username,password from users where username=value and password=value
             //select count(username) from users where username=value and password=value
-           let collobj= connobj.db("AugustNodejs").collection("Users")
+           let collobj= connobj.db("BITSLogin").collection("Users")
           let cnt= collobj.countDocuments({"Username":username,"Password":pwd})
           .then(
             (cnt)=>{
