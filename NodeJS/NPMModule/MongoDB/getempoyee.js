@@ -19,7 +19,7 @@ appServer.get("/Getemployee", (req, res) => {
       //validate the input against the entries available in mongoserver
       //select username,password from users where username=value and password=value
       //select count(username) from users where username=value and password=value
-      let collobj = connobj.db("AugustNodejs").collection("Employee");
+      let collobj = connobj.db("BITSEmployee").collection("Employee");
       let totalcnt = collobj.countDocuments({ empno: EmpId })
         .then((totalcnt) => {
           console.log(totalcnt);
