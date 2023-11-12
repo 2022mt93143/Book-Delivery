@@ -24,7 +24,7 @@ let mongoc = mongodb.MongoClient
                 //select username,password from users where username=value and password=value
                 //select count(username) from users where username=value and password=value
                 let data = {'UserName': username,'Age':age,'Email':email,'State': state,'Country':country}
-               let collobj= connobj.db("AugustNodejs").collection("UserRegistration").insertOne(data)
+               let collobj= connobj.db("BITSRegistration").collection("UserRegistration").insertOne(data)
               .then(
                 (collobj)=>{
                     console.log(collobj);
